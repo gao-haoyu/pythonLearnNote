@@ -104,7 +104,7 @@ print(ret)
 #0
 ```
 
-###4.code_practice
+### 4.code_practice
 - Q:将列表['张三','张四','张五','王一','王二','王六']中张姓全部改换为王姓
 - A:
 ```python
