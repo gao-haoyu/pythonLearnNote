@@ -10,3 +10,5 @@ python基本语法：包含变量、判断、循环
 python中字符串的基本操作
 ### [day03](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_03.md)
 列表(list), 元组(tuple), 集合(set)的基础操作
+### [day04](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_04.md)
+字典(dict), 字节(byte), 运算符的基础操作
