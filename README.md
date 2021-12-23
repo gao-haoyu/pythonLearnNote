@@ -12,3 +12,5 @@ python中字符串的基本操作
 列表(list), 元组(tuple), 集合(set)的基础操作
 ### [day04](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_04.md)
 字典(dict), 字节(byte), 运算符的基础操作
+### [day05](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_05.md)
+文件操作，文件读写、修改基础操作
