@@ -193,7 +193,6 @@ with open('test.jpg', mode= 'rb') as f, \
 需求:将name.txt中的王姓均改为张姓
 思路：先将修改后的内容重新赋值给一个文件，之后删除源文件，再重命名新文件。实现修改的效果。
 ```
-
 ```python
 import os
 
