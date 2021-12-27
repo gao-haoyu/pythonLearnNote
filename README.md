@@ -14,3 +14,7 @@ python中字符串的基本操作
 字典(dict), 字节(byte), 运算符的基础操作
 ### [day05](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_05.md)
 文件操作，文件读写、修改基础操作
+### [day06](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_06.md)
+函数(上)，基本概念、作用域、参数、返回值
+### [day07](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_07.md)
+函数(中)，函数嵌套、闭包、装饰器

@@ -1,16 +1,11 @@
 ## python学习--day07
 **内容概述**
-- 函数编程(上)
+- 函数编程(中)
 ****
 重点知识
 - 变量的作用域&&函数的嵌套
 - 闭包
 - 装饰器
-- 迭代器
-- 生成器
-- 推导式
-- 匿名函数
-- 内置函数(下)
 ****
 
 ### 1.变量的作用域&&函数的嵌套
@@ -99,7 +94,7 @@ print(ret())        #想要修改conVar，也只能借助manaVar函数
 10
 '''
 ```
-### 3.装饰器
+### 3.装饰器的雏形
 ```text
 定义：本质上是一个闭包
 作用：对目标函数进行功能扩展，不改变源代码
@@ -163,6 +158,101 @@ def func2():
 
 func1()
 func2()
+'''
+登录
+新增人员
+打印日志
+登录
+删除人员
+打印日志
+'''
+```
+### 4.装饰器的参数&返回值
+```text
+当装饰器需要传递参数时，因为装饰的函数其参数不确定，应采用如下的方式
+def wrapper(fn):
+    def inner(*args, **kargs):            #此处*args,**kagrs是接受所有位置参数&关键字参数
+        #add operator
+        fn(*args, **kargs)                #此处在调用中采用*args&**kargs是将元组，字典打散为正常参数
+        #add operator                     #这个点可以参考函数的参数小节
+    return inner
+```
+```text
+当装饰器需要返回值的处理时，其情况如下：
+def wrapper(fn):
+    def inner(*args, **kargs):            
+        #add operator
+        ret= fn(*args, **kargs)       #此处的ret接收目标函数fn的返回值，并将其作为inner的返回值return
+        #add operator                 #装饰器归根到底就是inner中对函数重新包装
+        return ret                    
+    return inner
 ```
 
+### 5.装饰器的嵌套
+```python
+def wrapper1(fn):
+    def inner(*args, **kargs):
+        print('进入装饰器1')
+        ret= fn(*args, **kargs)
+        print('退出装饰器1')
+        return ret
+    return inner
 
+def wrapper2(fn):
+    def inner(*args, **kargs):
+        print('进入装饰器2')
+        ret= fn(*args, **kargs)
+        print('退出装饰器2')
+        return ret
+    return inner
+@wrapper1
+@wrapper2
+def target():
+    print('目标函数')
+
+target()
+
+'''
+进入装饰器1
+进入装饰器2
+目标函数
+退出装饰器2
+退出装饰器1
+'''                  #多层装饰，其表达规律为层层嵌套
+```
+### 6.装饰器使用示例
+```python
+status= False
+def wrapper(fn):
+    def inner(*args, **kargs):
+        global status
+        if status== False:
+            name= input('>>>')
+            password= input('>>>')
+            while 1:
+                if name== 'admin' and password== '123':
+                    status= True
+                    break
+                else:
+                    print('信息有误')
+        ret= fn(*args, **kargs)
+        return ret
+    return inner
+
+@wrapper
+def add():
+    print('增加人员')
+
+@wrapper
+def delete():
+    print('删除人员')
+
+add()
+delete()
+'''
+>>>admin
+>>>123
+增加人员
+删除人员
+'''
+```
