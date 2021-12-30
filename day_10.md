@@ -115,6 +115,8 @@ class Point:
     __functionName__
 常见情况：
     __str__()   :一般其作用是将对象以字符串的形式输出，便于读取
+    __eq__()    :编写判别是否相等
+    __cmp__()   :比较大小
 ```
 ```python
 class Point:
@@ -129,7 +131,10 @@ class Point:
     
     def __str__(self) :                          #进行格式转换
         return f'Point({self.x}, {self.y})'
-
+    
+    def __eq__(self, other):                     #进行相等判断
+        return self.x== other.x & self.y== other.y
+    
     def draw(self):
         print(f'point({self.x}, {self.y})')
 
