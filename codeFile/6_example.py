@@ -13,4 +13,5 @@ def getMaxTimes(str):
 
 #测试
 ss= 'This is a common interview question'
-print(getMaxTimes(ss))
+#print(getMaxTimes(ss))
+
