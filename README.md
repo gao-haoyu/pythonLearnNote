@@ -20,3 +20,7 @@ python中字符串的基本操作
 函数(中)，函数嵌套、闭包、装饰器
 ### [day08](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_08.md)
 函数(下)，迭代器、生成器、匿名函数、内置函数
+### [day09](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_09.md)
+异常的处理，异常的抛出
+### [day10](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_10.md)
+类的基本概念，magic method， 属性property
