@@ -24,3 +24,5 @@ python中字符串的基本操作
 异常的处理，异常的抛出
 ### [day10](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_10.md)
 类的基本概念，magic method， 属性property
+### [day11](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_11.md)
+类的进阶知识，继承，多态，overriding
