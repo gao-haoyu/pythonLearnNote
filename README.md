@@ -28,3 +28,5 @@ python中字符串的基本操作
 类的进阶知识，继承，多态，overriding
 ### [day12](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_12.md)
 模组(modules)基本概念，文件引入方式
+### [day13](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_13.md)
+STL: File、SQLite、Data/Time、Random Values、Emails、sys argument、subprocess

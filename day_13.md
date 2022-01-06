@@ -1,6 +1,6 @@
 ## python学习--day13
 **内容概述**
-- 标准库(STL)上
+- 标准库(STL)
 ****
 重点知识
 - File
@@ -8,9 +8,11 @@
 - Data/Time
 - Random Values
 - Emails
+- sys argument
+- subprocess
 ****
 
-### Files
+### 1.Files
 ```text
     需要引入的库1： from pathlib import Path    # 路径相关的库
 ```
@@ -153,7 +155,7 @@ movie = json.loads(data)                 # 转换格式
 print(movie)
 ```
 
-### SQLite
+### 2.SQLite
 ```text
    准备的工具 db browser for sqlite  非常好用类似于 navicat 数据库可视化工具
    导包 import sqlite3
@@ -186,7 +188,7 @@ with sqlite3.connect('db.sqlite3') as conn:                    # 连接数据库
     # (2, 'Bob', 2000)
 ```
 
-### Date&&Time
+### 3.Date&&Time
 ```text
 Time模块
     import time
@@ -224,7 +226,7 @@ print('minutes', dt1.minute)
 print('seconds', dt1.second)
 ```
 
-### random values
+### 4.random values
 ```text
 导入模块：
     import random
@@ -244,7 +246,7 @@ print('seconds', dt1.second)
     '''
 ```
 
-### Browser && Email
+### 5.Browser && Email
 **Browser**
 ```python
 # 导入模块
@@ -295,4 +297,42 @@ with smtplib.SMTP(host='smtp.qq.com', port=25) as smtp:    # qq邮箱需要额�
 hi, $name, this is test             
 </body>
 </html>
+```
+
+### 6.sys arguments
+```text
+在命令行运行程序时，增加参数
+导入包：
+    import sys
+```
+```python
+# 示例代码
+import sys
+
+print(sys.argv)
+if len(sys.argv) == 1:
+    print('one argument')
+else:
+    print('more than one')
+
+'''
+>> python .\11_stl_file.py a b c
+['.\\11_stl_file.py', 'a', 'b', 'c']
+more than one
+'''
+```
+
+### 7.run external program
+```text
+在运行主程序之外，调用运行别的程序运行指令
+导入包：
+    import subprocess
+```
+```python
+import subprocess
+
+ret = subprocess.run(['python', 'subprocess_test.py'], capture_output=True, text=True)
+print(ret.args)            
+print(ret.stdout)          # 子进程的输出
+print(ret.returncode)      # 子进程的返回值，成功为0，可根据这个来确定子进程的运行情况
 ```
