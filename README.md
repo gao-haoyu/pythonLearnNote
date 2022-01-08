@@ -30,3 +30,5 @@ python中字符串的基本操作
 模组(modules)基本概念，文件引入方式
 ### [day13](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_13.md)
 STL: File、SQLite、Data/Time、Random Values、Emails、sys argument、subprocess
+### [day14](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_14.md)
+Popular Python Package: pip、 Web Scraping、 Browser Automation、 PDFs、 Excel

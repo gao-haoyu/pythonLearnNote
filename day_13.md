@@ -36,14 +36,14 @@ True
 __init__
 .py
 package\subpackage
-C:\Users\Gao\PycharmProjects\pythonProject\package\subpackage\__init__.py
+~\package\subpackage\__init__.py
 '''
 
 path1 = Path('./package')
 path2 = path1.with_name('offer.txt')      # 将目录更改为当前目录下另一文件，若不存在则报错
 print(path2.absolute())
 '''
-C:\Users\Gao\PycharmProjects\pythonProject\offer.txt
+~\pythonProject\offer.txt
 '''
 ```
 **获取型特征**
