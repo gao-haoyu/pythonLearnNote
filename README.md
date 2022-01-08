@@ -32,3 +32,5 @@ python中字符串的基本操作
 STL: File、SQLite、Data/Time、Random Values、Emails、sys argument、subprocess
 ### [day14](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_14.md)
 Popular Python Package: pip、 Web Scraping、 Browser Automation、 PDFs、 Excel
+### [day15](https://github.com/gao-haoyu/pythonLearnNote/blob/main/day_15.md)
+Important Python Package: numpy的基本操作，pandas的官方资料
